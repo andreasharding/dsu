@@ -326,7 +326,7 @@ var dsu = (function () {
 		var coordinates = [];
 	
 		geoJSON.forEach(function (e, i){
-			coordinates.push(e.geometry.coordinates);
+			coordinates.push([parseFloat(e.geometry.coordinates[0]), parseFloat(e.geometry.coordinates[1])]);
 		});
 	
 		return coordinates;
